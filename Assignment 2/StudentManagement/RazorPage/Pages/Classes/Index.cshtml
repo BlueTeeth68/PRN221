@@ -1,0 +1,52 @@
+﻿@page
+@model RazorPage.Pages.Classes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Class management</h1>
+<div class="d-flex justify-content-end align-items-center ">
+
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+
+</div>
+<table class="table mt-4 table-striped border border-1 border-dark ">
+    <thead class="text-light bg-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].ClassId)
+            </th>
+            <th colspan="4">
+                @Html.DisplayNameFor(model => model.Class[0].ClassName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Class)
+        {
+            <tr >
+                <td class="text-center py-1">
+                    <div >
+                        <p>
+                            @Html.DisplayFor(modelItem => item.ClassId)
+                        </p>
+                    </div>
+                </td>
+                <td class="w-75 py-1">
+                    <div >
+                        <p >
+                            @Html.DisplayFor(modelItem => item.ClassName)
+                        </p>
+                    </div>
+                </td>
+                <td class="text-end py-1">
+                    <a class="btn btn-warning " asp-page="./Edit" asp-route-id="@item.ClassId">Edit</a>
+                </td>
+                <td class="text-end py-1">
+                    <a class="btn btn-danger " asp-page="./Delete" asp-route-id="@item.ClassId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

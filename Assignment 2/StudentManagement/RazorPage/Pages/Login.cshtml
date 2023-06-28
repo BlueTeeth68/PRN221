@@ -1,0 +1,33 @@
+﻿@page
+@model RazorPage.Pages.Login.LoginModel
+@{
+    ViewData["Tile"] = "Login";
+}
+
+
+<div class="container container-fluid w-50 m-auto mt-5 px-5 pt-4 pb-5">
+    <h2 class="text-center pb-2">Login</h2>
+
+
+
+    <form method="post">
+        <div class="form-group d-flex justify-content-between align-items-center my-3">
+            <label for="username" value="@Model.Credential?.Username" class="container-fluid w-25 text-start">Username:</label>
+            <input type="text" id="username" name="Username" class="form-control container-fluid w-75" />
+        </div>
+        <div class="form-group d-flex justify-content-between align-items-center mb-3">
+            <label for="password" class="container-fluid w-25 text-start">Password:</label>
+            <input type="password" id="password" name="Password" class="form-control container-fluid w-75" />
+        </div>
+
+        @if (Model.Message != null)
+        {
+            <p class="text-danger text-center">@Model.Message</p>
+        }
+
+        <div class="d-flex justify-content-center align-items-center mt-4">
+            <button type="submit" class="btn btn-primary w-25 ">Login</button>
+        </div>
+
+    </form>
+</div>

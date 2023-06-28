@@ -1,0 +1,80 @@
+﻿@page
+@model RazorPage.Pages.ClassMembers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Class member management</h1>
+@if (Model.Message != null)
+{
+    <p class="text-danger text-center">@Model.Message</p>
+}
+<div class="d-flex justify-content-between align-items-center mt-3">
+    <form class="input-group w-50" method="post">
+        <input type="text" name="Query" id="query" value="@Model.Query" class="form-control" placeholder="Search...">
+        <button type="submit" class="btn btn-secondary">Search</button>
+    </form>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+
+</div>
+<table class="table mt-4 table-striped border border-1 border-dark ">
+    <thead class="text-light bg-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassMember[0].MemberId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassMember[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassMember[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassMember[0].DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassMember[0].Role)
+            </th>
+            <th colspan="2">
+                @Html.DisplayNameFor(model => model.ClassMember[0].Gender)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.ClassMember != null)
+        {
+            @foreach (var item in Model.ClassMember)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MemberId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateOfBirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Role)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+
+                    <td class="text-end py-1">
+                        <a class="btn btn-warning " asp-page="./Edit" asp-route-id="@item.MemberId">Edit</a>
+                    </td>
+                    <td class="text-end py-1">
+                        <a class="btn btn-danger " asp-page="./Delete" asp-route-id="@item.MemberId">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

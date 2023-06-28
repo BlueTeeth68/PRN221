@@ -1,0 +1,16 @@
+﻿using Repository.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repository.Repository
+{
+    public class ClassRepository : BaseRepository<Class>
+    {
+        public ClassRepository(StudentDBContext dBContext) : base(dBContext)
+        {
+        }
+    }
+}
