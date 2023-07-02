@@ -57,7 +57,7 @@ namespace BusinessObjects.Models
             modelBuilder.Entity<ClassMember>(entity =>
             {
                 entity.HasKey(e => e.MemberId)
-                    .HasName("PK__ClassMem__B29B85347690ED2D");
+                    .HasName("PK__ClassMem__B29B853498EAF6AC");
 
                 entity.ToTable("ClassMember");
 
@@ -100,7 +100,7 @@ namespace BusinessObjects.Models
                         r => r.HasOne<ClassMember>().WithMany().HasForeignKey("MemberId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK__MemberCla__membe__30F848ED"),
                         j =>
                         {
-                            j.HasKey("MemberId", "ClassId").HasName("PK__MemberCl__CD44C2ACDF48AE21");
+                            j.HasKey("MemberId", "ClassId").HasName("PK__MemberCl__CD44C2AC33B7A35F");
 
                             j.ToTable("MemberClass");
 
@@ -114,12 +114,10 @@ namespace BusinessObjects.Models
             {
                 entity.ToTable("User");
 
-                entity.HasIndex(e => e.Username, "UQ__User__F3DBC572C04F693F")
+                entity.HasIndex(e => e.Username, "UQ__User__F3DBC5729786A286")
                     .IsUnique();
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.AvatarUrl)
                     .HasMaxLength(100)
@@ -138,7 +136,7 @@ namespace BusinessObjects.Models
                     .HasMaxLength(10)
                     .IsUnicode(false)
                     .HasColumnName("role")
-                    .HasDefaultValueSql("('Manager')");
+                    .HasDefaultValueSql("('User')");
 
                 entity.Property(e => e.Username)
                     .HasMaxLength(50)

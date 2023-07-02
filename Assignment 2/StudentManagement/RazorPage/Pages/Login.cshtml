@@ -12,21 +12,32 @@
 
     <form method="post">
         <div class="form-group d-flex justify-content-between align-items-center my-3">
-            <label for="username" value="@Model.Credential?.Username" class="container-fluid w-25 text-start">Username:</label>
-            <input type="text" id="username" name="Username" class="form-control container-fluid w-75" />
+            <label asp-for="Credential.Username" class="container-fluid w-25 text-start"></label>
+            <div class="w-75">
+                <input asp-for="Credential.Username" class="form-control container-fluid w-100" />
+                <span asp-validation-for="Credential.Username" class="text-danger"></span>
+            </div>
+            
         </div>
+        
         <div class="form-group d-flex justify-content-between align-items-center mb-3">
-            <label for="password" class="container-fluid w-25 text-start">Password:</label>
-            <input type="password" id="password" name="Password" class="form-control container-fluid w-75" />
+            <label asp-for="Credential.Password" class="container-fluid w-25 text-start"></label>
+            <div class="w-75">
+                <input asp-for="Credential.Password" class="form-control container-fluid w-100" />
+                <span asp-validation-for="Credential.Password" class="text-danger"></span>
+            </div>
         </div>
+        
 
         @if (Model.Message != null)
         {
             <p class="text-danger text-center">@Model.Message</p>
         }
 
-        <div class="d-flex justify-content-center align-items-center mt-4">
-            <button type="submit" class="btn btn-primary w-25 ">Login</button>
+        <div class="d-flex justify-content-end align-items-center mt-4">
+            <div class="w-75">
+                <button type="submit" class="btn btn-primary w-25 ">Login</button>
+            </div>
         </div>
 
     </form>

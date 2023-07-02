@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BusinessObjects.Models;
 using Microsoft.Build.Framework;
 using Repositories;
+using System.ComponentModel.DataAnnotations;
 
 namespace RazorPage.Pages.ClassMembers
 {
@@ -17,6 +18,7 @@ namespace RazorPage.Pages.ClassMembers
 
 
         [BindProperty]
+        [DataType(DataType.Text)]
         public string? Query { get; set; }
         public string Message { get; set; }
 

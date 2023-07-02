@@ -1,0 +1,45 @@
+﻿@page
+@model RazorPage.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container container-fluid w-50 m-auto mt-5 px-5 pt-4 pb-5">
+    <h2 class="text-center pb-2">Register</h2>
+
+    <form method="post">
+        <div class="form-group d-flex justify-content-between align-items-center my-3">
+            <label asp-for="UserRegister.Username" class="container-fluid w-25 text-start"></label>
+            <div class="w-75">
+                <input asp-for="UserRegister.Username" class="form-control container-fluid w-100" />
+                <span asp-validation-for="UserRegister.Username" class="text-danger"></span>
+            </div>
+        </div
+        ><div class="form-group d-flex justify-content-between align-items-center my-3">
+            <label asp-for="UserRegister.FullName" class="container-fluid w-25 text-start"></label>
+            <div class="w-75">
+                <input asp-for="UserRegister.FullName" class="form-control container-fluid w-100" />
+                <span asp-validation-for="UserRegister.FullName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group d-flex justify-content-between align-items-center mb-3">
+            <label asp-for="UserRegister.Password" class="container-fluid w-25 text-start"></label>
+            <div class="w-75">
+                <input asp-for="UserRegister.Password" class="form-control container-fluid w-100" />
+                <span asp-validation-for="UserRegister.Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        @if (Model.Message != null)
+        {
+            <p class="text-danger text-center">@Model.Message</p>
+        }
+
+        <div class="d-flex justify-content-end align-items-center mt-4">
+            <div class="w-75">
+                <button type="submit" class="btn btn-primary w-25 ">Register</button>
+            </div>
+        </div>
+
+    </form>
+</div>

@@ -1355,10 +1355,10 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/6.0.18": {
+      "Microsoft.EntityFrameworkCore.Tools/6.0.19": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "6.0.18"
+          "Microsoft.EntityFrameworkCore.Design": "6.0.19"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -5518,17 +5518,17 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/6.0.18": {
-      "sha512": "ujVs/OsH057dvWVzB7TZ0TVpdbbaqKUtt9YU5Q5zF1igX3VrCB1usJKOeQ9Sd1hKT1VB7BYi/0esyg/I2PYWXQ==",
+    "Microsoft.EntityFrameworkCore.Tools/6.0.19": {
+      "sha512": "NhYxCGdCExoRRn/9J0YRLHfOmtr9aRvaS8yqvuRYgZM+w0zra0HiDigpMe3geA6O0iIZY6p1AaYqy9dQG+B8Sw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/6.0.18",
+      "path": "microsoft.entityframeworkcore.tools/6.0.19",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/_._",
-        "microsoft.entityframeworkcore.tools.6.0.18.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.6.0.19.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -11022,7 +11022,7 @@
       "BusinessObjects >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.19",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.19",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.18",
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.19",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.14",
       "Repositories >= 1.0.0"
     ]
@@ -11093,7 +11093,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[6.0.18, )"
+            "version": "[6.0.19, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

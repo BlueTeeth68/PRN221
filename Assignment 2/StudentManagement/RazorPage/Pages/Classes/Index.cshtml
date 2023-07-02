@@ -6,11 +6,15 @@
 }
 
 <h1>Class management</h1>
-<div class="d-flex justify-content-end align-items-center ">
-
+<div class="d-flex justify-content-between align-items-center mt-3">
+    <form class="input-group w-50" method="post">
+        <input asp-for="@Model.Query" class="form-control" placeholder="Search..." />
+        <button type="submit" class="btn btn-secondary">Search</button>
+    </form>
     <a asp-page="Create" class="btn btn-primary">Create New</a>
 
 </div>
+
 <table class="table mt-4 table-striped border border-1 border-dark ">
     <thead class="text-light bg-dark">
         <tr>

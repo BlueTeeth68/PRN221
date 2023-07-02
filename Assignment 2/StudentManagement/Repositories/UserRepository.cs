@@ -11,7 +11,7 @@ namespace Repositories
     {
         public bool ExistByUsername(string username)
         {
-            return FindByUsername(username) != null;
+            return _dbSet.Any(u => u.Username.ToLower().Equals(username.ToLower()));
         }
 
         public User FindByUsername(string username)

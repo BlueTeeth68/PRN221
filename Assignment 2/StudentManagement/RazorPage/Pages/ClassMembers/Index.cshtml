@@ -12,7 +12,7 @@
 }
 <div class="d-flex justify-content-between align-items-center mt-3">
     <form class="input-group w-50" method="post">
-        <input type="text" name="Query" id="query" value="@Model.Query" class="form-control" placeholder="Search...">
+        <input asp-for="@Model.Query" class="form-control" placeholder="Search..." />
         <button type="submit" class="btn btn-secondary">Search</button>
     </form>
     <a asp-page="Create" class="btn btn-primary">Create New</a>

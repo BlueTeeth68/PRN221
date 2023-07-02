@@ -1,0 +1,22 @@
+﻿@page
+@model RazorPage.Pages.Account.IndexModel
+@{
+    ViewData["Title"] = "Account";
+}
+
+<div class="container container-fluid w-50 m-auto mt-5 px-5 pt-4 pb-5">
+    <h2 class="text-center pb-2">Account</h2>
+
+        <p class="my-3">
+        Username: @Model.Username
+        </p>
+        <p class="my-3">
+        Full name: @Model.FullName
+        </p>
+        <p class="my-3">
+        Avatar Url: @Model.AvatarUrl
+        </p>
+        <p class="my-3">
+        Role: @Model.Role
+        </p>
+</div>

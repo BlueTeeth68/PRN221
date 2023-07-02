@@ -38,13 +38,21 @@ namespace RazorPage.Pages.Login
                 {
                     Message = null;
                     HttpContext.Session.SetString("fullName", user.FullName);
+                    HttpContext.Session.SetString("username", user.Username);
                     HttpContext.Session.SetString("role", user.Role);
-                    return RedirectToPage("./Classes/Index");
+                    HttpContext.Session.SetString("avatarUrl", user.AvatarUrl);
+                    if (user.Role == "Admin")
+                    {
+                        return RedirectToPage("./Classes/Index");
+                    } else
+                    {
+                        return RedirectToPage("./Account/Index");
+                    }
                 }
             }
             else
             {
-                Message = "Error on input data.";
+                Message = null;
                 return Page();
             }
         }
@@ -54,8 +62,9 @@ namespace RazorPage.Pages.Login
     public class Credential
     {
 
-        [Display(Name = "User name")]
+        [Display(Name = "Username")]
         [Required(ErrorMessage = "Username is required.")]
+        [DataType(DataType.Text)]
         public string Username { get; set; }
 
         [Display(Name = "Password")]

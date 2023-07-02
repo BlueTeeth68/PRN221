@@ -9,6 +9,6 @@ namespace Repositories
 {
     public interface IClassRepository : IGenericRepository<Class>
     {
-
+        IEnumerable<Class> FindByName(string name);
     }
 }

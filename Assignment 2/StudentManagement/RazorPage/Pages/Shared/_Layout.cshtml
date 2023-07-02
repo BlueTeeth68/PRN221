@@ -1,6 +1,7 @@
 ﻿@{
     var fullName = Context.Request.HttpContext.Session.GetString("fullName");
     var role = Context.Request.HttpContext.Session.GetString("role");
+    var avatarUrl = Context.Request.HttpContext.Session.GetString("avatarUrl");
 }
 
 <!DOCTYPE html>
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RazorPage.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/jpg" href="~/Asset/Images/brand.jpg" />
 </head>
 <body>
     <header>
@@ -24,17 +26,10 @@
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav d-flex justify-content-start">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                        <div>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                        <div class="d-flex justify-content-end align-items-center">
                             <a class="nav-link text-light" asp-area="" asp-page="/Login">Login</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Register">Register</a>
                         </div>
                     </div>
                 </div>
@@ -48,17 +43,24 @@
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav d-flex justify-content-start">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-page="/Classes/Index">Class</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-page="/ClassMembers/Index">ClassMember</a>
-                            </li>
-                        </ul>
+                    <div class="navbar-collapse collapse d-sm-inline-flex @(role == "Admin" ? "justify-content-between" : "justify-content-end")">
+                        
+                        @if (role == "Admin")
+                        {
+                            <ul class="navbar-nav d-flex justify-content-start">
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-page="/Classes/Index">Class</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-page="/ClassMembers/Index">ClassMember</a>
+                                </li>
+                            </ul>
+                        }
                         <div>
                             <ul class="navbar-nav d-flex justify-content-start">
+                                <li class="nav-item">
+                                    <img src="@avatarUrl" alt="Avatar" class="rounded-circle" width="40" height="40" />
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-light" asp-area="" asp-page="/Account/Index">@fullName</a>
                                 </li>
@@ -66,7 +68,6 @@
                                     <a class="nav-link text-light" asp-area="" asp-page="/Logout">Log out</a>
                                 </li>
                             </ul>
-                            
                         </div>
                     </div>
                 </div>
