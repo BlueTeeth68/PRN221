@@ -15,12 +15,16 @@ namespace RazorPage.Pages.ClassMembers
     public class IndexModel : PageModel
     {
         private readonly IClassMemberRepository classMemberRepository;
+        private readonly int pageSize = 20;
 
 
         [BindProperty]
         [DataType(DataType.Text)]
         public string? Query { get; set; }
         public string Message { get; set; }
+
+        public int Page { get; set; } = 1;
+        public int TotalPage { get; set; }
 
         public IndexModel(IClassMemberRepository classMemberRepository)
         {
@@ -29,11 +33,23 @@ namespace RazorPage.Pages.ClassMembers
 
         public IList<ClassMember> ClassMember { get; set; } = default!;
 
-        public void OnGet()
+        public void OnGet(int? pageNumber, string? query)
         {
-            if (Query == null)
+            Query = query ?? Query;
+            if (Query == null || Query.Trim().Equals(""))
             {
-                ClassMember = classMemberRepository.GetAll().ToList();
+                Page = pageNumber ?? 1;
+                PageResult<ClassMember> result = classMemberRepository.GetAllWithPaginate(Page, pageSize);
+                TotalPage = result.TotalPage;
+                Console.WriteLine($"pageNumber: {pageNumber}");
+                Console.WriteLine($"Total page: {TotalPage}");
+                ClassMember = result.Results.ToList();
+            } else
+            {
+                Page = pageNumber ?? 1;
+                PageResult<ClassMember> result = classMemberRepository.FindByName(Query, Page, pageSize);
+                TotalPage = result.TotalPage;
+                ClassMember = result.Results.ToList();
             }
         }
 
@@ -44,12 +60,16 @@ namespace RazorPage.Pages.ClassMembers
                 Message = null;
                 if (Query == null || Query.Trim().Equals(""))
                 {
-                    ClassMember = classMemberRepository.GetAll().ToList();
+                    PageResult<ClassMember> result = classMemberRepository.GetAllWithPaginate(Page, pageSize);
+                    TotalPage = result.TotalPage;
+                    ClassMember = result.Results.ToList();
                     return Page();
                 }
                 else
                 {
-                    ClassMember = classMemberRepository.FindByName(Query).ToList();
+                    PageResult<ClassMember> result = classMemberRepository.FindByName(Query, Page, pageSize);
+                    TotalPage = result.TotalPage;
+                    ClassMember = result.Results.ToList();
                     return Page();
                 }
             }

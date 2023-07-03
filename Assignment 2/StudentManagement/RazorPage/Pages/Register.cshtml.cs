@@ -23,6 +23,7 @@ namespace RazorPage.Pages
 
         public void OnGet(UserRegister userRegister)
         {
+
         }
 
         public IActionResult OnPost()
