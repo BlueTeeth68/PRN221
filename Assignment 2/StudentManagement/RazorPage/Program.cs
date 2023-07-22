@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<StudentDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-//Dependency injection
+//Dependency injection                  
 builder.Services.AddScoped<IClassRepository, ClassRepository>();
 builder.Services.AddScoped<IClassMemberRepository, ClassMemberRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();

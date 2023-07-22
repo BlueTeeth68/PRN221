@@ -1,0 +1,21 @@
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\bin\Debug\net6.0-windows\Countdown Clock.exe
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\bin\Debug\net6.0-windows\Countdown Clock.deps.json
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\bin\Debug\net6.0-windows\Countdown Clock.runtimeconfig.json
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\bin\Debug\net6.0-windows\Countdown Clock.dll
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\bin\Debug\net6.0-windows\Countdown Clock.pdb
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.csproj.AssemblyReference.cache
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\MainWindow.g.cs
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\App.g.cs
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock_MarkupCompile.cache
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock_MarkupCompile.lref
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\MainWindow.baml
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.g.resources
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.AssemblyInfoInputs.cache
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.AssemblyInfo.cs
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.csproj.CoreCompileInputs.cache
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.dll
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\refint\Countdown Clock.dll
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.pdb
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\Countdown Clock.genruntimeconfig.cache
+F:\Project git\PRN221\Assignment 3\Countdown Clock\Countdown Clock\obj\Debug\net6.0-windows\ref\Countdown Clock.dll
