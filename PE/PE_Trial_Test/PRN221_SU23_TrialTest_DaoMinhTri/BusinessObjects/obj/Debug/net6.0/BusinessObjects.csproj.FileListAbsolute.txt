@@ -1,0 +1,15 @@
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\bin\Debug\net6.0\BusinessObjects.deps.json
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\bin\Debug\net6.0\BusinessObjects.runtimeconfig.json
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\bin\Debug\net6.0\BusinessObjects.dll
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\bin\Debug\net6.0\BusinessObjects.pdb
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.AssemblyReference.cache
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfoInputs.cache
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfo.cs
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.CoreCompileInputs.cache
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.dll
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\refint\BusinessObjects.dll
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.pdb
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\BusinessObjects.genruntimeconfig.cache
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\obj\Debug\net6.0\ref\BusinessObjects.dll
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\BusinessObjects\bin\Debug\net6.0\appSettings.json

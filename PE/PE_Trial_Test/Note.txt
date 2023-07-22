@@ -1,0 +1,32 @@
+- Chạy script database
+- Tạo mới solution
+- Add Razor Page core project, add BusinessObjects Class library, add Repositories Class library
+- Add Nuget vào BusinessObjects: 
++ Microsoft.EntityFrameworkCore.SqlServer --version 6.0.0
++ Microsoft.EntityFrameworkCore.Design --version 6.0.0
++ Microsoft.EntityFrameworkCore.Tools --version 6.0.0
++ Microsoft.Extension.Configuration.Json --version 6.0.0
+- Add appsettings file vào BusinessObjects, chỉnh property sang "Copy Always"
+- Chỉnh connection string trong DbContext:
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                //optionsBuilder.UseSqlServer("Server=(local);Uid=sa;Pwd=123456;Database=AuthorInstitution2023DB");
+                optionsBuilder.UseSqlServer(GetConnectionString());
+            }
+        }
+
+        public String GetConnectionString()
+        {
+
+            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+            IConfiguration configuration = builder.Build();
+            return configuration.GetConnectionString("DefaultConnection");
+
+        }
+
+- Viết các hàm repository. Nhớ chỉnh access modifier sang public
+- Qua project Razor page, add connection string cho razor page
