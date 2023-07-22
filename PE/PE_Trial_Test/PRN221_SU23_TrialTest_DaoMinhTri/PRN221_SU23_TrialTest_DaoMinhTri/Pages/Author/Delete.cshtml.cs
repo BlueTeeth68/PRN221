@@ -26,6 +26,13 @@ namespace AuthorInstitution_DaoMinhTri.Pages.Author
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            //check login
+            String fullName = HttpContext.Session.GetString("FullName");
+            if (fullName == null)
+            {
+                return RedirectToPage("/Login");
+            }
+
             if (id == null)
             {
                 return NotFound();

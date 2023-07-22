@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BusinessObjects.Models;
+using Repositories.CorrespondingAuthors;
+using Repositories.InstitutionInformations;
 
 namespace AuthorInstitution_DaoMinhTri.Pages.Author
 {
     public class EditModel : PageModel
     {
-        private readonly BusinessObjects.Models.AuthorInstitution2023DBContext _context;
+        private readonly ICorrespondingAuthorRepository repository;
+        private readonly IInstitutionInformationRepository subRepository;
 
-        public EditModel(BusinessObjects.Models.AuthorInstitution2023DBContext context)
+
+        public EditModel(ICorrespondingAuthorRepository repository, IInstitutionInformationRepository subRepository)
         {
-            _context = context;
+            this.repository = repository;
+            this.subRepository = subRepository;
         }
 
         [BindProperty]
@@ -24,18 +29,27 @@ namespace AuthorInstitution_DaoMinhTri.Pages.Author
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
-            if (id == null || _context.CorrespondingAuthors == null)
+
+            //check login
+            String fullName = HttpContext.Session.GetString("FullName");
+            if (fullName == null)
+            {
+                return RedirectToPage("/Login");
+            }
+
+
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var correspondingauthor =  await _context.CorrespondingAuthors.FirstOrDefaultAsync(m => m.AuthorId == id);
+            var correspondingauthor = repository.GetById(id);
             if (correspondingauthor == null)
             {
                 return NotFound();
             }
             CorrespondingAuthor = correspondingauthor;
-           ViewData["InstitutionId"] = new SelectList(_context.InstitutionInformations, "InstitutionId", "Area");
+            ViewData["InstitutionId"] = new SelectList(subRepository.GetAll().ToList(), "InstitutionId", "Area");
             return Page();
         }
 
@@ -48,30 +62,11 @@ namespace AuthorInstitution_DaoMinhTri.Pages.Author
                 return Page();
             }
 
-            _context.Attach(CorrespondingAuthor).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CorrespondingAuthorExists(CorrespondingAuthor.AuthorId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            repository.Update(CorrespondingAuthor);
 
             return RedirectToPage("./Index");
         }
 
-        private bool CorrespondingAuthorExists(string id)
-        {
-          return (_context.CorrespondingAuthors?.Any(e => e.AuthorId == id)).GetValueOrDefault();
-        }
+
     }
 }

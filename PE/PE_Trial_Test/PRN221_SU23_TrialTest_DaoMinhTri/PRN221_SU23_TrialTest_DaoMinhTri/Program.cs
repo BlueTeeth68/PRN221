@@ -1,6 +1,7 @@
 using BusinessObjects.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories.CorrespondingAuthors;
+using Repositories.InstitutionInformations;
 using Repositories.MemberAccounts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<AuthorInstitution2023DBContext>(options => options
 //Add Dependency injection
 builder.Services.AddScoped<IMemberAccountRepository, MemberAccountRepository>();
 builder.Services.AddScoped<ICorrespondingAuthorRepository, CorrespondingAuthorRepository>();
+builder.Services.AddScoped<IInstitutionInformationRepository, InstitutionInformationRepository>();
 
 //Add session
 builder.Services.AddSession();
