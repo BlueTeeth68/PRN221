@@ -1,5 +1,6 @@
 using BusinessObjects.Models;
 using Microsoft.EntityFrameworkCore;
+using Repositories.CorrespondingAuthors;
 using Repositories.MemberAccounts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-var app = builder.Build();
+
 
 //Add Connection String
 builder.Services.AddRazorPages();
@@ -15,9 +16,12 @@ builder.Services.AddDbContext<AuthorInstitution2023DBContext>(options => options
 
 //Add Dependency injection
 builder.Services.AddScoped<IMemberAccountRepository, MemberAccountRepository>();
+builder.Services.AddScoped<ICorrespondingAuthorRepository, CorrespondingAuthorRepository>();
 
 //Add session
 builder.Services.AddSession();
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

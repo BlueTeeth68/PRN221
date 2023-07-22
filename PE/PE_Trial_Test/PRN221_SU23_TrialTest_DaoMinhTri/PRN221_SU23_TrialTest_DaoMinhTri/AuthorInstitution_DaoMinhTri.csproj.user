@@ -4,5 +4,10 @@
     <RazorPage_SelectedScaffolderID>ModelBasedCrudRazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ViewDialogWidth>650</WebStackScaffolding_ViewDialogWidth>
+    <WebStackScaffolding_IsLayoutPageSelected>True</WebStackScaffolding_IsLayoutPageSelected>
+    <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
+    <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
+    <WebStackScaffolding_LayoutPageFile />
+    <WebStackScaffolding_DbContextTypeFullName>BusinessObjects.Models.AuthorInstitution2023DBContext</WebStackScaffolding_DbContextTypeFullName>
   </PropertyGroup>
 </Project>

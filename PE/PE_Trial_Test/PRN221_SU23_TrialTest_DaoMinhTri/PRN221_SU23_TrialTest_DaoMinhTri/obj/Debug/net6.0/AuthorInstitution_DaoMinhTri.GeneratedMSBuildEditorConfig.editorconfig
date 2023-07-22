@@ -16,12 +16,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Author/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Author/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Author/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Author/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Author/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Project git/PRN221/PE/PE_Trial_Test/PRN221_SU23_TrialTest_DaoMinhTri/PRN221_SU23_TrialTest_DaoMinhTri/Pages/Privacy.cshtml]

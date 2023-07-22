@@ -1,0 +1,21 @@
+﻿@page
+@model AuthorInstitution_DaoMinhTri.Pages.LoginModel
+@{
+    <div class="container">
+
+        <h2>Login</h2>
+        <p>@Model.Message</p>
+        <form method="post">
+            <label asp-for="Credential.MemberId"></label>
+            <input asp-for="Credential.MemberId" /> <br />
+            <span asp-validation-for="Credential.MemberId"></span> <br /> <br />
+            <label asp-for="Credential.Password"></label>
+            <input asp-for="Credential.Password" /> <br />
+            <span asp-validation-for="Credential.Password"></span><br /><br />
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+    </div>
+
+}
+

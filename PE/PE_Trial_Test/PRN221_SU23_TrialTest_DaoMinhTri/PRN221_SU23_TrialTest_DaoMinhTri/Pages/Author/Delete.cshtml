@@ -1,0 +1,61 @@
+﻿@page
+@model AuthorInstitution_DaoMinhTri.Pages.Author.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CorrespondingAuthor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CorrespondingAuthor.AuthorName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CorrespondingAuthor.AuthorName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CorrespondingAuthor.AuthorBirthday)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CorrespondingAuthor.AuthorBirthday)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CorrespondingAuthor.Bio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CorrespondingAuthor.Bio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CorrespondingAuthor.Skills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CorrespondingAuthor.Skills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CorrespondingAuthor.Institution)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CorrespondingAuthor.Institution.Area)
+        </dd>
+    </dl>
+
+    <form method="post" id="delete-form">
+        <input type="hidden" asp-for="CorrespondingAuthor.AuthorId" />
+        <input type="button" value="Delete" class="btn btn-danger" onclick="confirmDelete()" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
+
+<script>
+    function confirmDelete() {
+        if (confirm("Are you sure you want to delete this entity?")) {
+            //document.forms[0].submit();
+            document.getElementById("delete-form").submit();
+        }
+    }
+</script>
