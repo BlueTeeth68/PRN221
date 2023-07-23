@@ -6,59 +6,113 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:Countdown_Clock"
     mc:Ignorable="d"
-    Title="MainWindow"
-    Height="260"
-    Width="292">
+    Title="Count down clock"
+    Height="300"
+    Width="632"
+    Background="#FF1C2630">
     <Canvas
         Height="NaN"
         Margin="0,0,162,138"
         Width="NaN">
-
-        <TextBlock
-            x:Name="txtHour"
-            HorizontalAlignment="Left"
-            TextWrapping="Wrap"
-            Text="3"
-            VerticalAlignment="Top"
-            Grid.Column="1"
-            Canvas.Left="102"
-            Canvas.Top="109"
-            Width="20"
-            TextAlignment="Center" />
         <TextBlock
             x:Name="txtMinute"
-            Canvas.Left="138"
+            Canvas.Left="132"
             TextWrapping="Wrap"
-            Text="59"
-            Canvas.Top="109"
+            Text="00"
+            Canvas.Top="60"
+            Foreground="White"
+            FontSize="70"
+            FontFamily="BIZ UDPGothic"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+        <Button
+            x:Name="btnStart"
+            Content="Start"
+            Foreground="White"
+            Canvas.Left="147"
+            Canvas.Top="187"
+            Height="37"
+            Width="82"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#FF16A085"
+            BorderBrush="White"
+            BorderThickness="0,0,0,0"
+            Click="btnStart_Click" />
+        <Button
+            x:Name="btnStop"
+            Content="Stop"
+            Canvas.Left="273"
+            Canvas.Top="187"
+            Height="38"
+            Width="84"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Foreground="White"
+            Background="#FFC0392B"
+            BorderBrush="White"
+            BorderThickness="0,0,0,0"
+            Click="btnStop_Click" />
+        <Button
+            x:Name="btnReset"
+            Content="Reset"
+            Canvas.Left="402"
+            Canvas.Top="187"
+            Height="38"
+            Width="86"
+            FontSize="20"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Width="20"
-            TextAlignment="Center"
-            RenderTransformOrigin="0.05,0.41" />
+            Background="#FF2980B9"
+            Foreground="White"
+            BorderBrush="White"
+            BorderThickness="0,0,0,0"
+            Click="btnReset_Click" />
         <TextBlock
             x:Name="txtSecond"
-            Canvas.Left="177"
+            Canvas.Left="264"
             TextWrapping="Wrap"
-            Text="59"
-            Canvas.Top="109"
-            RenderTransformOrigin="0.467,-0.248"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Width="20"
-            TextAlignment="Center"
-            TargetUpdated="txtSecond_TargetUpdated"
-            Initialized="txtSecond_Initialized" />
-        <TextBox
-            x:Name="txSecond"
-            
-            Canvas.Left="88"
+            Text="00"
+            Canvas.Top="60"
+            Foreground="White"
+            FontSize="70"
+            FontFamily="BIZ UDPGothic"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" />
+        <TextBlock
+            x:Name="txtMiliSecond"
+            Canvas.Left="397"
             TextWrapping="Wrap"
-            Text="TextBox"
-            Canvas.Top="169"
-            Width="120"
-            Visibility="Hidden" />
-
-
+            Text="00"
+            Canvas.Top="60"
+            Foreground="White"
+            FontSize="70"
+            FontFamily="BIZ UDPGothic"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <TextBlock
+            x:Name="txtClock_Copy2"
+            Canvas.Left="241"
+            TextWrapping="Wrap"
+            Text=":"
+            Canvas.Top="54"
+            Foreground="White"
+            FontSize="70"
+            FontFamily="BIZ UDPGothic"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <TextBlock
+            x:Name="txtClock_Copy3"
+            Canvas.Left="373"
+            TextWrapping="Wrap"
+            Text=":"
+            Canvas.Top="53"
+            Foreground="White"
+            FontSize="70"
+            FontFamily="BIZ UDPGothic"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
     </Canvas>
 </Window>

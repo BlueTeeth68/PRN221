@@ -12,7 +12,6 @@ builder.Services.AddRazorPages();
 
 
 //Add Connection String
-builder.Services.AddRazorPages();
 builder.Services.AddDbContext<AuthorInstitution2023DBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //Add Dependency injection

@@ -1,7 +1,7 @@
 F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\appsettings.Development.json
-F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\appsettings.json
 F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\AuthorInstitution_DaoMinhTri.staticwebassets.runtime.json
 F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\AuthorInstitution_DaoMinhTri.exe
+F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\appsettings.json
 F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\AuthorInstitution_DaoMinhTri.deps.json
 F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\AuthorInstitution_DaoMinhTri.runtimeconfig.json
 F:\Project git\PRN221\PE\PE_Trial_Test\PRN221_SU23_TrialTest_DaoMinhTri\PRN221_SU23_TrialTest_DaoMinhTri\bin\Debug\net6.0\AuthorInstitution_DaoMinhTri.dll
